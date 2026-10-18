@@ -10,8 +10,8 @@ const userSchema = require("../Schemas/UserSchema");
 const cloudinary = require("cloudinary");
 const CheckAuth = require("../Middleware/CheckAuth");
 const stripe = require("../utils/stripe");
-const accountSid = "AC68fbae21de943ef3324c791e00ab2723";
-const authToken = "59b2545a2bf7d67d781ecf99e11a0a82";
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require("twilio")(accountSid, authToken);
 // mongose models
 const User = new mongoose.model("User", userSchema);
