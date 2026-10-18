@@ -31,9 +31,9 @@ app.use(
   })
 );
 cloudinary.config({
-  cloud_name: "dif5pfkci",
-  api_key: "796545256327366",
-  api_secret: "C2ys5VmAJ5QYcB9QeZ00oGElvwg",
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
   secure: true,
 });
 
